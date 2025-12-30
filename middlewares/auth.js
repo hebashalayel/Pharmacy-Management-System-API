@@ -3,6 +3,7 @@ const createError = require('http-errors');
 const { readFileSync } = require('fs');
 const TokenBlacklist = require('../models/TokenBlacklist');
 
+
 module.exports = async (req, res, next) => {
     const authHeader = req.get('Authorization');
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -25,4 +26,5 @@ module.exports = async (req, res, next) => {
     } catch (err) {
         next(createError(401, 'Invalid/expired token'));
     }
+
 };
