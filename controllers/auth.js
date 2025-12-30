@@ -45,5 +45,4 @@ const logout = async (req, res, next) => {
         next(createError(500, 'Logout failed'));
     }
 };
-
 module.exports = { signup, login, logout };
