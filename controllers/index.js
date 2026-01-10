@@ -3,4 +3,6 @@ module.exports = {
     authController: require('./auth'),
     primaryMedicineController: require('./primaryMedicine'),
     alternativeMedicineController:require('./alternativeMedicine')
+
+    
 }
