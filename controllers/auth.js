@@ -9,7 +9,7 @@ const signup = async (req, res, next) => {
         await user.save();
         returnJson(res, 201, true, 'User created successfully',null);
     } catch (err) {
-        next(err);
+        next(err); 
     }
 };
 
@@ -46,3 +46,4 @@ const logout = async (req, res, next) => {
     }
 };
 module.exports = { signup, login, logout };
+
