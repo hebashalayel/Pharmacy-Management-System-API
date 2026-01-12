@@ -11,7 +11,8 @@ const dbconnection = (collection, cb) => {
             console.error("Connection error:", err);
         });
 };
-
+\
 
 module.exports = dbconnection;
+
 
