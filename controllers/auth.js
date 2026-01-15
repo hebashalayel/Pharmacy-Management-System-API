@@ -2,7 +2,6 @@ const { User } = require('../models');
 const jwt = require('jsonwebtoken');
 const { readFileSync } = require('fs');
 const TokenBlacklist = require('../models/TokenBlacklist');
-
 const signup = async (req, res, next) => {
     try {
         const user = new User(req.body);
@@ -45,6 +44,7 @@ const logout = async (req, res, next) => {
     }
 };
 module.exports = { signup, login, logout };
+
 
 
 
