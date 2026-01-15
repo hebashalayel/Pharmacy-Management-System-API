@@ -5,7 +5,6 @@ const getAlternativeMedicinesByPrimary = (req, res, next) => {
         .then(alternatives => returnJson(res, 200, true, 'Alternative medicines retrieved successfully', alternatives))
         .catch(err => next(err));
 };
-
 const addAlternative = (req, res, next) => { 
     AlternativeMedicine.add(req.body)
         .then(result => returnJson(res, 201, true, 'Alternative medicine added successfully', null))
@@ -30,4 +29,5 @@ module.exports = {
     updateAlternative,
     deleteAlternative
 };
+
 
