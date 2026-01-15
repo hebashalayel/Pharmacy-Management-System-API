@@ -13,6 +13,7 @@ const getPharmaciesPageCount = (req, res, next) => {
         .catch(err => next(err));
 };
 
+
 const getPharmacyById = (req, res, next) => {
     const id = req.params.id;
 
@@ -54,6 +55,7 @@ module.exports = {
     updatePharmacy,
     deletePharmacy
 };
+
 
 
 
