@@ -12,8 +12,6 @@ const signup = async (req, res, next) => {
         next(err);  
     }
 };   
-
-
 const login = async (req, res, next) => {
     try {
         const result = await User.login(req.body);
@@ -47,6 +45,7 @@ const logout = async (req, res, next) => {
     }
 };
 module.exports = { signup, login, logout };
+
 
 
 
