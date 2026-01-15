@@ -7,8 +7,6 @@ const getPharmacies = (req, res, next) => {
         .then(pharmacies => returnJson(res, 200, true, 'Pharmacies retrieved successfully', pharmacies))
         .catch(err => next(err));
 };
-
-
 const getPharmaciesPageCount = (req, res, next) => {
     Pharmacy.getPharmaciesPageCount()
         .then(result => returnJson(res, 200, true, 'Page count retrieved successfully', result))
@@ -56,6 +54,7 @@ module.exports = {
     updatePharmacy,
     deletePharmacy
 };
+
 
 
 
