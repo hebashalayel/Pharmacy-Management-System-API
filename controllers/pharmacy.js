@@ -12,8 +12,6 @@ const getPharmaciesPageCount = (req, res, next) => {
         .then(result => returnJson(res, 200, true, 'Page count retrieved successfully', result))
         .catch(err => next(err));
 };
-
-
 const getPharmacyById = (req, res, next) => {
     const id = req.params.id;
 
@@ -55,6 +53,7 @@ module.exports = {
     updatePharmacy,
     deletePharmacy
 };
+
 
 
 
