@@ -10,7 +10,6 @@ const signup = async (req, res, next) => {
     } catch (err) {
         next(err);  
     }
-    
 }; 
 const login = async (req, res, next) => {
     try {
@@ -45,6 +44,7 @@ const logout = async (req, res, next) => {
     }
 };
 module.exports = { signup, login, logout };
+
 
 
 
