@@ -6,10 +6,6 @@ const getPrimaryMedicines = (req, res, next) => {
         .catch(err => next(err));
 };
 
-
-
-
-
 const getPrimaryMedicineById = (req, res, next) => {
     PrimaryMedicine.getById(req.params.id)
         .then(medicine => returnJson(res, 200, true, 'Primary medicine retrieved successfully', medicine))
@@ -42,5 +38,6 @@ module.exports = {
     deletePrimaryMedicine
 
 };
+
 
 
