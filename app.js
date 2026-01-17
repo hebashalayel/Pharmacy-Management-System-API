@@ -9,16 +9,13 @@ process.on('unhandledRejection', (reason) => {
 })
 const midddlewares = require('./middlewares');
 midddlewares.global(app);
-
 const routes = require('./routes');
 routes(app);
-
 //not found handler
 app.use((req, res, next) => {
     const error = createError(404);
     next(error);
 })
-
 //error handler
 app.use((error,req, res, next) => {
     res.status(error.status || 500).json({
@@ -28,3 +25,4 @@ app.use((error,req, res, next) => {
 })
 
 module.exports = app;
+
