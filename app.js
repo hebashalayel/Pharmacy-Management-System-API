@@ -7,7 +7,6 @@ process.on('unhandledRejection', (reason) => {
     console.log(reason);
     process.exit(1);
 })
-
 const midddlewares = require('./middlewares');
 midddlewares.global(app);
 
@@ -27,4 +26,5 @@ app.use((error,req, res, next) => {
         message:error.message
     })
 })
+
 module.exports = app;
